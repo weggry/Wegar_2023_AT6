@@ -1,14 +1,14 @@
 class PosIntChecker:
     def __init__(self, strlist):
-        if isinstance(strlist, list):
-            if not all(isinstance(x, str) for x in strlist):
+        if isinstance(strlist, list): # first precondition, checking for list input type
+            if not all(isinstance(x, str) for x in strlist): # second precondition, checking for str type in input list
                 print("List must only contain strings")
             else:
                 self._strlist = strlist
         else:
             print("Input needs to be a list")
         
-        self._posintlist = []
+        self._posintlist = [] # empty list to add all positive integers to
 
     def checker(self):
         for i in self._strlist:
