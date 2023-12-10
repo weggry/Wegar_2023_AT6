@@ -17,10 +17,10 @@ class PosIntChecker:
                 if str_to_int >= 1:
                     self._posintlist.append(str_to_int)
         
-        if not all(isinstance(x, int) for x in self._posintlist):
-            print("All elements of result list must be integers")
-        if not all(x >= 1 for x in self._posintlist):
-            print("All elements must be positive integers")
+        if not all(isinstance(x, int) for x in self._posintlist): # First postcondition, ensuring all elements of new list are ints
+            print("All elements of result list must be integers") # prints error if they're not.
+        if not all(x >= 1 for x in self._posintlist): # Second postcondition, ensuring that all ints are positive
+            print("All elements must be positive integers") # prints error if they're not.
 
         print(self._posintlist)
             
